@@ -1,24 +1,18 @@
-# README
+## Разворачиваем приложение для разработки
+Первая сборка, выполнить поочерёдно:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+`docker-compose build` - сборка образов.
 
-Things you may want to cover:
+`docker-compose up --no-start` - создание контейнеров.
 
-* Ruby version
+`docker-compose run --rm web bash -c 'bundle && bin/rails db:create db:migrate db:seed'` - установка гемов, создание базы
 
-* System dependencies
+`docker-compose up` - запуск всех контейнеров.
 
-* Configuration
+Если надо поставить новые гемы:
 
-* Database creation
+`docker-compose run --rm web bundle`
 
-* Database initialization
+Если обновились пакеты yarn:
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`docker-compose run --rm web yarn`
