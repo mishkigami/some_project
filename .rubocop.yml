@@ -101,3 +101,7 @@ Style/ExponentialNotation:
 
 Style/SlicingWithRange:
   Enabled: true
+
+Rails/NotNullColumn:
+  Exclude:
+  - 'db/migrate/*.rb'

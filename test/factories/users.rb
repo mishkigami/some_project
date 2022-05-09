@@ -1,6 +1,5 @@
 FactoryBot.define do
-  factory :note do
+  factory :user do
     name
-    description
   end
 end
